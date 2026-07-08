@@ -63,25 +63,8 @@ export default function Home() {
         </div>
         
         {/* Dynamic Canvas Scrolling sequences (Vulcan, Rotor, Chassis) */}
-        {infrahawkData.sequences.map((seq, index) => (
-          <div key={seq.id}>
-            <SequenceSection data={seq} />
-            
-            {/* Tactical Transition Spacing Divider */}
-            {index < infrahawkData.sequences.length - 1 && (
-              <div className="h-[40vh] bg-hawk-black relative flex items-center justify-center border-y border-white/5 overflow-hidden">
-                <div className="absolute inset-0 hud-noise pointer-events-none opacity-10"></div>
-                <div className="w-full max-w-5xl px-8 flex justify-between items-center text-[10px] font-mono text-hawk-platinum/30">
-                  <div className="flex items-center gap-4">
-                    <span className="w-1.5 h-1.5 bg-hawk-blue rounded-full animate-pulse-slow"></span>
-                    <span className="tracking-[0.2em] uppercase">SYSTEM TRANSITION // SYNC_OK</span>
-                  </div>
-                  <div className="flex-1 mx-8 border-t border-dashed border-white/10"></div>
-                  <span className="tracking-[0.1em] text-hawk-blue uppercase">INITIATING NEXT SCHEMATIC NODE</span>
-                </div>
-              </div>
-            )}
-          </div>
+        {infrahawkData.sequences.map((seq) => (
+          <SequenceSection key={seq.id} data={seq} />
         ))}
         
         {/* Inquire / Acquisition Form Section with Double-Bezel Architecture */}
