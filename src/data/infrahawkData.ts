@@ -27,7 +27,7 @@ export const infrahawkData = {
       subtitle: "6,000 rounds per minute. Unrivaled suppression.",
       desktopPath: "/images/mini-desktop/",
       mobilePath: "/images/mini-mobile/",
-      frameCount: 30,
+      frameCount: 120,
       specifications: [
         "CALIBER: 7.62x51mm NATO",
         "RATE OF FIRE: 100 RDS/SEC",
